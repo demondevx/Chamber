@@ -1,4 +1,4 @@
-# Chamber Bot - User Guide
+# 🏛️ Chamber Bot - User Guide
 
 [![Discord.js](https://img.shields.io/badge/Discord.js-14.14.1-blue.svg?style=flat-square&logo=discord)](https://discord.js.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.0.0+-green.svg?style=flat-square&logo=node.js)](https://nodejs.org/)
@@ -29,6 +29,7 @@ Once you're in your voice channel, you can use these commands to manage it:
 **`/voice name <name>`**
 - Rename your voice channel to any name you want
 - Example: `/voice name Gaming Room`
+- Note: 6-minute cooldown between renames
 
 **`/voice limit <number>`**
 - Set how many people can join your channel (0-99)
@@ -53,6 +54,10 @@ Once you're in your voice channel, you can use these commands to manage it:
 - If you're in a channel where the owner left, you can claim ownership
 - This gives you control of the channel
 
+**`/voice status <message>`** ✨ NEW
+- Set a custom status message that appears on your voice channel
+- Example: `/voice status Chill vibes only`
+
 ### Premium Commands (Require Premium Subscription)
 
 **`/voice text`**
@@ -70,12 +75,12 @@ Once you're in your voice channel, you can use these commands to manage it:
 **`/voice unghost`**
 - Make your hidden channel visible again
 
-**`/voice invite @user <message>`**
-- Send a direct invite to someone with a custom message
-- Example: `/voice invite @friend Join our gaming session!`
+**`/voice invite @user`**
+- Send a direct invite to someone to join your channel
+- Example: `/voice invite @friend`
 
-**`/voice nsfw`**
-- Toggle NSFW mode for your channel
+**`/voice age-restricted`**
+- Toggle age-restricted mode for your channel
 - Useful for adult content discussions
 
 **`/voice bitrate <kbps>`**
@@ -88,6 +93,76 @@ Once you're in your voice channel, you can use these commands to manage it:
 
 **`/voice reject-role @role`**
 - Prevent an entire role from joining your channel
+
+## 🌍 Region Controls ✨ NEW
+
+Optimize your voice quality by selecting the server location closest to you!
+
+**`/region`**
+- Opens a menu to choose your preferred voice server region
+- **12 Available Regions**: Automatic, Brazil, Hong Kong, India, Japan, Rotterdam, Singapore, South Africa, US Central, US East, US South, US West
+- Lower latency = better call quality
+- Change anytime with no cooldown
+
+You can also change your region from the **Channel Interface** menu!
+
+## 💾 Profile System ✨ NEW
+
+Save your favorite channel settings and apply them instantly!
+
+**`/profile save <name>`**
+- Save your current channel configuration as a preset
+- Example: `/profile save My Gaming Setup`
+
+**`/profile apply`**
+- Choose from your saved profiles and apply settings in one click
+
+**`/profile list`**
+- View all your saved profiles
+
+**`/profile delete <name>`**
+- Remove profiles you no longer need
+
+**`/profile set-default <name>`** (Premium Only)
+- Set a profile to auto-apply to every new channel you create
+
+**What Gets Saved:**
+- **Free Users**: Channel name and limit (1 profile)
+- **Premium Users**: Name, limit, region, ghost mode, lock status (20 profiles)
+
+## 📊 Stats & Leaderboards ✨ NEW
+
+Track your voice channel activity and see community rankings!
+
+**`/stats`**
+- View server-wide voice channel statistics
+- See total channels created and overall activity
+
+**`/stats me`**
+- Check your personal voice channel usage
+- See how many channels you've created and time spent
+
+**`/leaderboard`**
+- View community rankings
+- **Top VC Creators**: Who creates the most channels
+- **Longest Sessions**: Who spends the most time in voice
+- **Time Frames**: Weekly, monthly, or all-time stats
+
+## 🎫 Access Request System ✨ NEW
+
+Let users politely request access to your locked channels!
+
+**`/permitembed`**
+- Posts an interactive panel for requesting channel access
+- Users can browse available temporary channels
+- Send access requests with one click
+
+**How It Works:**
+1. User runs `/permitembed` and selects "Channel List"
+2. Picks your channel from the dropdown
+3. Request appears in your voice channel's text area with Accept/Reject buttons
+4. You click to approve or deny
+5. Permissions update automatically
 
 ## General Commands
 
@@ -110,32 +185,34 @@ Once you're in your voice channel, you can use these commands to manage it:
 Chamber offers a premium subscription that unlocks advanced features:
 
 ### What You Get with Premium:
+- **Unlimited Profiles**: Save up to 20 channel configurations with all settings
+- **Auto-Apply Profiles**: Set defaults that apply automatically to new channels
 - **Text Channel Creation**: Create temporary text channels for your voice channels
 - **Game Detection**: Automatic channel renaming based on your current game
 - **Ghost Mode**: Hide your channels from the public
 - **Direct Invites**: Send personalized invites to users
-- **NSFW Toggle**: Control adult content settings
+- **Age-Restricted Toggle**: Control adult content settings
 - **Custom Bitrate**: Set higher audio quality
 - **Role Permissions**: Control access by entire roles
 - **Premium Support**: Priority help when you need it
 
 ### How to Get Premium:
-1. Contact the bot owner or server administrator
-2. They can grant you premium access
-3. Use `/subscription activate` to activate it on your server
-4. Use `/subscription status` to check your premium status
+Contact the bot owner or server administrator. Premium is activated per-server, so all members benefit!
 
 ## Tips and Best Practices
 
 ### Channel Management
 - **Be Respectful**: Don't abuse the lock/unlock feature to exclude people unfairly
 - **Use Descriptive Names**: Name your channels clearly so people know what's happening
+- **Save Profiles**: Create presets for quick setup
+- **Pick Your Region**: Choose a voice server near you for better quality
 - **Clean Up**: When you're done, leave your channel - it will automatically delete
 
 ### Privacy and Safety
-- **Ghost Mode**: Use this for private conversations
-- **Permit/Reject**: Control who can join your channels
-- **NSFW Content**: Use the NSFW toggle for adult discussions
+- **Ghost Mode**: Use this for private conversations (Premium)
+- **Lock + Permit**: Control exactly who can join
+- **Access Requests**: Let people ask politely instead of forcing entry
+- **Age-Restricted Content**: Use the toggle for adult discussions
 
 ### Getting Help
 - **Use `/help`**: Always start here if you're confused
@@ -157,8 +234,12 @@ Chamber offers a premium subscription that unlocks advanced features:
 
 **"I can't rename my channel!"**
 - Make sure you're the owner of the channel
-- Check if the server has premium features enabled
+- Wait 6 minutes between renames (cooldown to prevent spam)
 - Try the command again
+
+**"I can't save more profiles!"**
+- Free users get 1 profile - upgrade to premium for 20 profiles
+- Premium users have a 20 profile limit
 
 **"The bot isn't responding!"**
 - Use `/ping` to check if the bot is online
@@ -175,15 +256,17 @@ If you're a server administrator, you can set up Chamber with different channel 
 - **Predefined**: Custom templates with variables
 
 ### Admin Commands:
-- `/setup` - Configure the voice channel system
-- `/toggle` - Enable/disable bot features
-- `/interface` - Create the voice channel interface
-- `/troubleshoot` - Fix common issues
+- **`/setup`** - Configure the voice channel system
+- **`/toggle`** - Enable/disable bot features
+- **`/interface`** - Create the voice channel interface
+- **`/troubleshoot`** - Fix common issues
+- **`/premium status`** - Check server premium status
 
 ## Support and Community
 
 - **Bot Developer**: Demondev_
 - **Discord Support Server**: [Join our support server](https://discord.gg/VQFnjvvFhc)
+- **Email**: [demondev_](mailto:demondevxx@gmail.com)
 - **Server Moderators**: Help with server-specific issues
 - **Documentation**: This guide covers all user features
 - **Updates**: Chamber is regularly updated with new features
@@ -199,4 +282,4 @@ If you're a server administrator, you can set up Chamber with different channel 
 
 **Remember**: Chamber is designed to make your Discord voice experience more dynamic and fun. Use these features responsibly and respect your fellow server members!
 
-*Last updated: 4 August 2025* 
+*Last updated: September 30, 2025*
