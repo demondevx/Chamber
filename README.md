@@ -4,7 +4,6 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18.0.0+-green.svg?style=flat-square&logo=node.js)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0+-orange.svg?style=flat-square&logo=mongodb)](https://mongodb.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![Vote My Bot](https://top.gg/api/widget/1401037197645189160.svg)(https://top.gg//bot/1401037197645189160)
 
 Welcome to Chamber! This guide will help you understand how to use Chamber's voice channel features in your Discord server.
 
@@ -282,5 +281,8 @@ If you're a server administrator, you can set up Chamber with different channel 
 ---
 
 **Remember**: Chamber is designed to make your Discord voice experience more dynamic and fun. Use these features responsibly and respect your fellow server members!
+
+[![Vote My Bot](https://top.gg/api/widget/1401037197645189160.svg)](https://top.gg/bot/1401037197645189160)
+
 
 *Last updated: September 30, 2025*
