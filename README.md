@@ -20,6 +20,13 @@ Chamber is a powerful Discord bot that creates a dynamic voice channel experienc
 3. **Your Channel is Created**: Chamber will automatically create a new voice channel with your name
 4. **Start Talking**: You're now the owner of your own voice channel!
 
+## Prefix Command Support ✨ NEW
+
+Prefer typing over Slash commands? Chamber now supports **Prefix Commands**!
+- **Default Prefix**: `,` (Comma)
+- **Usage**: Simply type `,help`, `,voice`, or `,profile` in any text channel.
+- Most Slash commands have a prefix equivalent for faster access!
+
 ## Voice Channel Commands
 
 Once you're in your voice channel, you can use these commands to manage it:
@@ -50,11 +57,15 @@ Once you're in your voice channel, you can use these commands to manage it:
 - Kick someone out of your channel and prevent them from rejoining
 - Example: `/voice reject @troublemaker`
 
+**`/voice transfer @user`** ✨ NEW
+- Pass ownership of your voice channel to another member
+- Look for the <:transfer:1482403379975295007> icon in the interactive menus!
+
 **`/voice claim`**
 - If you're in a channel where the owner left, you can claim ownership
 - This gives you control of the channel
 
-**`/voice status <message>`** ✨ NEW
+**`/voice status <message>`**
 - Set a custom status message that appears on your voice channel
 - Example: `/voice status Chill vibes only`
 
@@ -62,7 +73,7 @@ Once you're in your voice channel, you can use these commands to manage it:
 
 **`/voice text`**
 - Create a temporary text channel that's linked to your voice channel
-- Perfect for sharing links or having text discussions while voice chatting
+- Includes built-in **Voice Chat Automod** to keep your chats safe from spam and bad links! ✨ NEW
 
 **`/voice game`**
 - Automatically rename your channel to show what game you're currently playing
@@ -94,7 +105,7 @@ Once you're in your voice channel, you can use these commands to manage it:
 **`/voice reject-role @role`**
 - Prevent an entire role from joining your channel
 
-## 🌍 Region Controls ✨ NEW
+## 🌍 Region Controls
 
 Optimize your voice quality by selecting the server location closest to you!
 
@@ -106,7 +117,7 @@ Optimize your voice quality by selecting the server location closest to you!
 
 You can also change your region from the **Channel Interface** menu!
 
-## 💾 Profile System ✨ NEW
+## 💾 Profile System
 
 Save your favorite channel settings and apply them instantly!
 
@@ -130,7 +141,7 @@ Save your favorite channel settings and apply them instantly!
 - **Free Users**: Channel name and limit (1 profile)
 - **Premium Users**: Name, limit, region, ghost mode, lock status (20 profiles)
 
-## 📊 Stats & Leaderboards ✨ NEW
+## 📊 Stats & Leaderboards
 
 Track your voice channel activity and see community rankings!
 
@@ -148,7 +159,7 @@ Track your voice channel activity and see community rankings!
 - **Longest Sessions**: Who spends the most time in voice
 - **Time Frames**: Weekly, monthly, or all-time stats
 
-## 🎫 Access Request System ✨ NEW
+## 🎫 Access Request System
 
 Let users politely request access to your locked channels!
 
@@ -164,11 +175,27 @@ Let users politely request access to your locked channels!
 4. You click to approve or deny
 5. Permissions update automatically
 
+## 🔒 Permanent Permissions ✨ NEW
+
+Admins can now set up "set and forget" permissions for all voice channels!
+
+**`/permanent permit @user/@role`**
+- Automatically allow a specific role or member in every new voice channel created.
+
+**`/permanent reject @user/@role`**
+- Automatically block a specific role or member from every new voice channel.
+
+**`/permanent list`**
+- View all current permanent permit and reject entries.
+
+**`/permanent remove @user/@role`**
+- Remove an entry from the permanent lists.
+
 ## General Commands
 
 **`/help`**
 - Shows all available commands and features
-- Use the dropdown menu to explore different categories
+- Use the dropdown menu to explore different categories in our stunning new **V2 Visual style**! ✨ NEW
 
 **`/ping`**
 - Check if the bot is responding quickly
@@ -261,6 +288,7 @@ If you're a server administrator, you can set up Chamber with different channel 
 - **`/interface`** - Create the voice channel interface
 - **`/troubleshoot`** - Fix common issues
 - **`/premium status`** - Check server premium status
+- **`/prefix set <new_prefix>`** - Change the bot's prefix for your server ✨ NEW
 
 ## Support and Community
 
@@ -285,4 +313,4 @@ If you're a server administrator, you can set up Chamber with different channel 
 [![Vote My Bot](https://top.gg/api/widget/1401037197645189160.svg)](https://top.gg/bot/1401037197645189160)
 
 
-*Last updated: September 30, 2025*
+*Last updated: March 14, 2026*
